@@ -1,0 +1,55 @@
+FrameWidgetClass rootFrame {
+ ignorepointer 0
+ color 0.502 0.502 0.502 0
+ position 704.72803 377.41101
+ size 529.01202 325.17801
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ draggable 1
+ {
+  TextWidgetClass RouletteTextWidget {
+   visible 1
+   ignorepointer 1
+   position 50.2 91.1067
+   size 428.61203 48
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 1
+   text "Roulette Name"
+   font "gui/fonts/metronbook28"
+   "text color" 0 0 0 1
+   "text halign" center
+   "text valign" center
+  }
+  TextWidgetClass RoulettePlayerName {
+   ignorepointer 1
+   position 41.6624 21.1345
+   size 445.68698 48
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 1
+   text "Player Name"
+   font "gui/fonts/metron-bold28"
+   "text halign" center
+   "text valign" center
+  }
+  ButtonWidgetClass RouletteButton {
+   position 60.1505 192.46599
+   size 408.71103 82.549
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 1
+   text "Button"
+   font "gui/fonts/metron28"
+   "text color" 0 0 0 1
+  }
+ }
+}
