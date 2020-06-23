@@ -1,19 +1,21 @@
 FrameWidgetClass rootFrame {
+ clipchildren 0
  ignorepointer 0
  color 0.502 0.502 0.502 0
- position 704.72803 377.41101
- size 529.01202 325.17801
+ position 674.466 358.577
+ size 550.73706 335.47501
  hexactpos 1
  vexactpos 1
  hexactsize 1
  vexactsize 1
- draggable 1
+ draggable 0
  {
   TextWidgetClass RouletteTextWidget {
    visible 1
    ignorepointer 1
-   position 50.2 91.1067
-   size 428.61203 48
+   color 0 0 0 1
+   position 8.53756 65.0751
+   size 511.93698 48
    hexactpos 1
    vexactpos 1
    hexactsize 1
@@ -27,29 +29,116 @@ FrameWidgetClass rootFrame {
   }
   TextWidgetClass RoulettePlayerName {
    ignorepointer 1
-   position 41.6624 21.1345
-   size 445.68698 48
+   color 0 0 0 1
+   position 78.87951 8.53755
+   size 441.595 48
    hexactpos 1
    vexactpos 1
    hexactsize 1
    vexactsize 1
    priority 1
    text "Player Name"
-   font "gui/fonts/metron-bold28"
+   font "gui/fonts/metronbook28"
+   "text color" 0 0 0 1
    "text halign" center
    "text valign" center
   }
-  ButtonWidgetClass RouletteButton {
-   position 60.1505 192.46599
-   size 408.71103 82.549
+  PanelWidgetClass ImagePanel {
+   clipchildren 1
+   ignorepointer 1
+   color 0.4667 0.4667 0.4667 0.7059
+   position 131.549 121.257
+   size 279.60501 118.45901
    hexactpos 1
    vexactpos 1
    hexactsize 1
    vexactsize 1
-   priority 1
-   text "Button"
-   font "gui/fonts/metron28"
-   "text color" 0 0 0 1
+   priority 7
+   style rover_sim_colorable
+   {
+    TextWidgetClass ImagePlaceholder {
+     ignorepointer 1
+     position 15.6895 11.8641
+     size 248.632 91.755
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "Image Placeholder"
+     font "gui/fonts/metronblack22"
+     "text halign" center
+     "text valign" center
+    }
+   }
+  }
+  PanelWidgetClass ClosePanelButton {
+   clipchildren 1
+   ignorepointer 1
+   color 0.4667 0.4667 0.4667 0.7059
+   position 3.88858 6.77869
+   size 34.1502 34.15
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 5
+   style rover_sim_colorable
+   {
+    ButtonWidgetClass RouletteCloseButton {
+     clipchildren 0
+     color 0 0 0 1
+     position 0.00003 -0.00026
+     size 34.1502 33.0478
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     priority 5
+     scriptclass ""
+     text "X"
+     font "gui/fonts/metronbook28"
+     "text color" 0 0 0 1
+    }
+   }
+  }
+  PanelWidgetClass PanelWidget0 {
+   clipchildren 0
+   ignorepointer 1
+   color 0.4667 0.4667 0.4667 0.7059
+   position 138.55301 252.937
+   size 251.90599 63.7032
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 5
+   style rover_sim_colorable
+   {
+    ButtonWidgetClass RouletteButton {
+     position 1.07458 -0.76206
+     size 251.002 65.7971
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     priority 5
+     scriptclass ""
+     text "Button"
+     font "gui/fonts/metronbook28"
+     "text color" 0 0 0 1
+    }
+   }
+  }
+  PanelWidgetClass PanelBackgorundRoulette {
+   ignorepointer 1
+   color 0.6902 1 0.5451 0.4627
+   position 0.0004 0.00005
+   size 547.586 334.414
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_colorable
   }
  }
 }

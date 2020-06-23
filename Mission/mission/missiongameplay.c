@@ -1,5 +1,5 @@
 modded class MissionGameplay extends MissionBase {
-    ref RouletteHeadingMenu m_RouletteHeadingMenu;
+	autoptr ref RouletteHeadingMenu m_RouletteHeadingMenu;
 
     override void OnUpdate (float timeslice) {
         super.OnUpdate (timeslice);
@@ -9,13 +9,24 @@ modded class MissionGameplay extends MissionBase {
 
             if (inp && inp.LocalPress ()) {
                 if (m_RouletteHeadingMenu) {
-					Print("2");
                     m_RouletteHeadingMenu.RouletteToggleHeading ();
                 } else {
-					Print("1");
-                    m_RouletteHeadingMenu = new RouletteHeadingMenu (true);
+                    this.initSSMenu();
                 }
             }
         }
     }
+
+    void initSSMenu()
+	{
+		if (g_Game.GetUIManager().GetMenu() == NULL)
+		{
+			if (g_Game.GetMissionState() == DayZGame.MISSION_STATE_GAME && GetGame().GetMission().GetHud())
+			{
+				m_RouletteHeadingMenu = new RouletteHeadingMenu;			
+				GetGame().GetUIManager().ShowScriptedMenu(m_RouletteHeadingMenu, NULL);
+			}																					
+		}										
+	}
+    
 }
